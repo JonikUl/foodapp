@@ -1,0 +1,4 @@
+frontend/node_modules
+.next
+.env.*
+.ideagit rm -r --cached .idea
