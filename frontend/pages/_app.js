@@ -1,9 +1,10 @@
 import React from 'react';
 import App from 'next/app';
 import Head from 'next/head';
-import Layout from '../components/Layout';
+import Layout from "../components/Layout";
+import withApollo from '../lib/apollo';
 
-export default class MyApp extends App {
+class MyApp extends App {
   render() {
     const {Component, pageProps} = this.props;
     return (
@@ -23,3 +24,5 @@ export default class MyApp extends App {
     );
   }
 }
+
+export default withApollo({ ssr: true })(MyApp);
